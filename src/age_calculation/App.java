@@ -1,12 +1,10 @@
 package age_calculation;
 
-import java.time.LocalDate;
-import java.time.Period;
 import java.util.Scanner;
 
 public class App {
-
-    public static void main(String[] args) {
+    
+    App() {
         int day;
         int month;
         int year;
@@ -22,12 +20,14 @@ public class App {
         System.out.print("Ayın Kaçında Doğdunuz : ");
         day = input.nextInt();
         
-        LocalDate birthdate = LocalDate.of(year, month, day);
+        Age myAge = new Age();
         
-        LocalDate now = LocalDate.now();
+        System.out.println(myAge.calculateAge(year, month, day) + " Yaşındasınız");
+    }
+    
+    public static void main(String[] args) {
         
-        int years = Period.between(birthdate, now).getYears();
+        new App();
         
-        System.out.println(years + " yaşındasınız.");
     }
 }

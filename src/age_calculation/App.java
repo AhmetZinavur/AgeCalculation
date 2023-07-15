@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class App {
     
-    App() {
+    public static void main(String[] args) {
+        
         int day;
         int month;
         int year;
@@ -23,11 +24,6 @@ public class App {
         Age myAge = new Age();
         
         System.out.println(myAge.calculateAge(year, month, day) + " Yaşındasınız");
-    }
-    
-    public static void main(String[] args) {
-        
-        new App();
         
     }
 }

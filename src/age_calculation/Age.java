@@ -4,11 +4,14 @@ import java.time.LocalDate;
 import java.time.Period;
 
 public class Age {
-
+    
+    private LocalDate birthdate;
+    private LocalDate now;
+    
     public int calculateAge(int year, int month, int day) {
 
-        LocalDate birthdate = LocalDate.of(year, month, day);
-        LocalDate now = LocalDate.now();
+        birthdate = LocalDate.of(year, month, day);
+        now = LocalDate.now();
         int years = Period.between(birthdate, now).getYears();
         return years;
 
